@@ -28,6 +28,5 @@ int Dif(int a, int b);
 int Mul(int a, int b);
 int Div(int a, int b);
 
-
 void ParseSources();
 void ReadTopScore();
