@@ -11,7 +11,9 @@ class EnemyController
     // Place here other required variables
     Enemy* enemies;
     int stepSize;
-    Point startinLocation;
+    Point startingLocation;
+    int maxEnemies;
+    int nrEnemies;
 
   public:
     void Init(

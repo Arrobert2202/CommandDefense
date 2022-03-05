@@ -6,7 +6,7 @@ int main()
     Point initialLocation;
     initialLocation.x = 10;
     initialLocation.y = 10;
-
+    int initialHealth = ENEMY_HEALTH;
     EnemyController controller;
     controller.Init(10, 2, initialLocation);
 

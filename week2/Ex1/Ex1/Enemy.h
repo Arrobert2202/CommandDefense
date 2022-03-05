@@ -9,7 +9,7 @@ class Enemy
     int health;
 
   public:
-    void Init(Point intitialLocation, int initialHealh);
+    void Init(Point initialLocation, int initialHealth);
     void Move(EnemyDirection direction, int step);
 
     bool IsDead();          // returns true is current health is lower or equal to 0
