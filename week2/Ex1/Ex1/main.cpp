@@ -20,7 +20,7 @@ int main()
     controller.DamageAll();
 
     int killed = controller.CountKilledEnemies();
-    std::cout << "Killed :" << killed << " enemies" << std::endl;
+    printf("Number of killed enemies: %d", killed);
 
     controller.Uninit();
 

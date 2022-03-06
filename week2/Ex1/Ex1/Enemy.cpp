@@ -10,11 +10,11 @@ void Enemy::Move(EnemyDirection direction, int step)
 {
     if (direction == EnemyDirection::UpDirection)
         location.y = location.y - step;
-    if (direction == EnemyDirection::DownDirection)
+    else if (direction == EnemyDirection::DownDirection)
         location.y = location.y + step;
-    if (direction == EnemyDirection::LeftDirection)
+    else if (direction == EnemyDirection::LeftDirection)
         location.x = location.x - step;
-    if (direction == EnemyDirection::RightDirection)
+    else if (direction == EnemyDirection::RightDirection)
         location.x = location.x + step;
 
 }
