@@ -15,48 +15,7 @@ int MyLibrary::get_book_index_by_id(int id)
             return -1;
     return books[id];
 }
-MyLibrary::MyLibrary(ostream& output_stream) : output_stream(output_stream)
-{
-    this->books_number = -1;
-    books= nullptr;
-}
-MyLibrary::MyLibrary(ostream& output_stream, int books_number, int* books) : output_stream(output_stream)
-{
-    this->books_number = books_number;
-    this->books        = new int[books_number];
-    for (int i=0;i<books_number;i++)
-    {
-        this->books[i] = books[i];
-    }
-}
-MyLibrary::MyLibrary(ostream& output_stream, int books_number, int min, int max): output_stream(output_stream)
-{
-    this->books_number = books_number;
-    srand(time(NULL));
-    books = new int[books_number];
-    for (int i=0;i<books_number;i++)
-    {
-        books[i] = rand() % (max - min) + min;
-    }
-}
-MyLibrary::MyLibrary(ostream& output_stream, const char* books_values) : output_stream(output_stream) 
-{
 
-}
-MyLibrary::MyLibrary(ostream& output_stream, int books_count, ...) : output_stream(output_stream)
-{
-    this->books_number = books_count;
-    books = new int[books_number];
-
-    va_list arg;
-    va_start(arg, books_count);
-    for (int i = 0; i < books_number; i++)
-    {
-        this->books[i] = va_arg(arg, int);
-    }
-
-    va_end(arg);
-}
 void MyLibrary::print_books()
 {
     output_stream << "Found " << books_number << " books" << endl;
