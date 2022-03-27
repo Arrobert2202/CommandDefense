@@ -68,7 +68,7 @@ Complex operator-(double l, const Complex& r)
 }
 Complex operator*(const Complex& l, const Complex& r)
 {
-    return { l.real() * r.real()-l.imag()*r.imag(), l.real()r.imag() + l.imag()*r.real() };
+    return { l.real() * r.real()-l.imag()*r.imag(), l.real()*r.imag() + l.imag()*r.real() };
 }
 
 bool operator==(const Complex& l,const Complex& r)
